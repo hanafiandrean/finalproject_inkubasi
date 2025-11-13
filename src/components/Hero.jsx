@@ -31,7 +31,7 @@ function Hero() {
         <p className="mt-4 max-w-lg text-sm leading-relaxed text-slate-300 sm:text-base">
           Ketik curhatmu, rekam suara, atau tunjukkan ekspresi wajah.{' '}
           <span className="text-slate-100">
-            MoodVibe
+            MoodVibe's
           </span>{' '}
           menganalisis suasana hati kamu dan mencarikan playlist Spotify yang paling pas.
         </p>
@@ -66,9 +66,9 @@ function Hero() {
           </div>
           <div className="flex items-center gap-2">
             <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-800/80 text-[10px]">
-              🏫
+            👥
             </span>
-            <span>Project inkubasi sekolah × industri</span>
+            <span>Collaborate with wong JosJis</span>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@ function Hero() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs font-medium text-slate-200">
-                  Chill Study Lo-Fi
+                  Chill music full album
                 </p>
                 <p className="text-[11px] text-slate-400">Auto-picked from Spotify</p>
               </div>
@@ -136,16 +136,16 @@ function Hero() {
 
             <div className="space-y-1.5 text-[11px] text-slate-300">
               <div className="flex items-center justify-between">
-                <span>Midnight Coding Session</span>
-                <span className="text-slate-500">2:31</span>
+                <span>Powfu - Death bed</span>
+                <span className="text-slate-500">2:52</span>
               </div>
               <div className="flex items-center justify-between">
-                <span>Lo-fi Rainy Window</span>
-                <span className="text-slate-500">3:02</span>
+                <span>Cigarettes After Sex - Cry</span>
+                <span className="text-slate-500">4:51</span>
               </div>
               <div className="flex items-center justify-between">
-                <span>Soft Focus Brainwave</span>
-                <span className="text-slate-500">2:47</span>
+                <span>Bruno Mars - Talking to the Moon</span>
+                <span className="text-slate-500">3:35</span>
               </div>
             </div>
           </div>

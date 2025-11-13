@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import Hero from './componentS/Hero';
+import Hero from './components/Hero';
 import HowItWorks from './components/HowItWorks';
 import ModesPreview from './components/ModesPreview';
 import SpotifyIntegration from './components/SpotifyIntegration';

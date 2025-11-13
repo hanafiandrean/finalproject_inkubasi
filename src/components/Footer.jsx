@@ -5,7 +5,7 @@ function Footer() {
     <footer className="border-t border-slate-800/80 bg-slate-950/80">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 text-[11px] text-slate-400 md:flex-row md:items-center md:justify-between md:px-6">
         <p>
-          © {new Date().getFullYear()} MoodVibe — Project inkubasi sekolah × industri.
+          © {new Date().getFullYear()} MoodVibe's — Project inkubasi @2025
         </p>
         <div className="flex flex-wrap gap-3">
           <a href="#home" className="transition hover:text-ink-primary">

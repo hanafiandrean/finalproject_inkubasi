@@ -26,7 +26,7 @@ function HowItWorks() {
     >
       <div className="mb-8 max-w-2xl">
         <h2 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl">
-          Cara kerja <span className="text-ink-primary">MoodVibe</span>
+          Cara kerja <span className="text-ink-primary">MoodVibe's</span>
         </h2>
         <p className="mt-3 text-sm text-slate-300 sm:text-base">
           Dibikin simple: cukup tiga langkah untuk mengubah perasaan jadi playlist Spotify.
