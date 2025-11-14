@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Hero() {
+  // 2 trigger (search bar & card) bakal nyalain state ini
+  const [previewActive, setPreviewActive] = useState(false);
+
   return (
     <section
       id="home"
@@ -12,16 +15,37 @@ function Hero() {
         <div className="absolute inset-10 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.18),transparent_55%),radial-gradient(circle_at_80%_60%,rgba(168,85,247,0.18),transparent_55%)]" />
       </div>
 
-      {/* left: copy */}
+      {/* kiri: teks */}
       <div className="relative z-10 max-w-xl">
-        <div className="inline-flex items-center gap-2 rounded-full border border-ink-primary/40 bg-slate-900/80 px-2 py-1 pr-3 text-xs text-ink-primary shadow-glow/30">
-          <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-ink-primary/20 text-[10px]">
-            🎧
-          </span>
-          <span className="font-semibold tracking-wide">
-            AI baca mood, Spotify nyetel lagu
-          </span>
-        </div>
+      <div
+    className="
+    group/pill inline-flex items-center gap-2 rounded-full
+    border border-ink-primary/40 bg-slate-900/80 px-2 py-1 pr-3
+    text-xs text-ink-primary shadow-glow/10 cursor-default
+    transition-colors transition-shadow duration-300
+    hover:border-ink-primary hover:bg-ink-primary/20 hover:shadow-glow
+  "
+>
+  <span
+    className="
+      inline-flex h-5 w-5 items-center justify-center rounded-full
+      bg-ink-primary/20 text-[10px]
+      transition-colors duration-300
+      group-hover/pill:bg-ink-primary/70 group-hover/pill:text-slate-950
+    "
+  >
+    🎧
+  </span>
+  <span
+    className="
+      font-semibold tracking-wide
+      transition-colors duration-300
+      group-hover/pill:text-cyan-100
+    "
+  >
+    AI baca mood, Spotify nyetel lagu
+  </span>
+</div>
 
         <h1 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl lg:text-5xl">
           Biar <span className="text-ink-primary">AI</span> yang baca mood kamu,&nbsp;
@@ -30,10 +54,8 @@ function Hero() {
 
         <p className="mt-4 max-w-lg text-sm leading-relaxed text-slate-300 sm:text-base">
           Ketik curhatmu, rekam suara, atau tunjukkan ekspresi wajah.{' '}
-          <span className="text-slate-100">
-            MoodVibe's
-          </span>{' '}
-          menganalisis suasana hati kamu dan mencarikan playlist Spotify yang paling pas.
+          <span className="text-slate-100">MoodVibe</span> menganalisis suasana hati kamu
+          dan mencarikan playlist Spotify yang paling pas.
         </p>
 
         <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -49,6 +71,34 @@ function Hero() {
           >
             Lihat cara kerja
           </a>
+        </div>
+
+        {/* SEARCH BAR – trigger 1 */}
+        <div
+          className="mt-6 max-w-md"
+          onMouseEnter={() => setPreviewActive(true)}
+          onMouseLeave={() => setPreviewActive(false)}
+        >
+          <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 px-3 py-2.5 shadow-sm shadow-slate-900/70 transition-colors hover:border-ink-primary/70 hover:bg-slate-900/90">
+            <div className="flex items-center gap-2">
+              <span className="text-base text-ink-primary">💬</span>
+              <input
+                className="flex-1 bg-transparent text-xs text-slate-200 placeholder:text-slate-500 outline-none sm:text-sm"
+                placeholder='Contoh: "aku lagi cape banget nih habis belajar"'
+                onFocus={() => setPreviewActive(true)}
+                onBlur={() => setPreviewActive(false)}
+              />
+              <button
+                type="button"
+                className="rounded-full bg-ink-primary px-3 py-1 text-[11px] font-semibold text-slate-950 shadow-glow transition hover:bg-cyan-300"
+              >
+                Preview
+              </button>
+            </div>
+            <p className="mt-1 text-[11px] text-slate-500">
+              #hubungkan_ke_ai_nya_yo
+            </p>
+          </div>
         </div>
 
         <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-slate-400">
@@ -68,13 +118,22 @@ function Hero() {
             <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-800/80 text-[10px]">
             👥
             </span>
-            <span>Collaborate with wong JosJis</span>
+            <span>Integrated with JosJis person</span>
           </div>
         </div>
       </div>
 
-      {/* right: mock UI */}
-      <div className="relative mt-8 w-full max-w-md md:mt-0 md:ml-auto">
+      {/* KANAN: LIVE MOOD PREVIEW – trigger 2 + efek pakai state */}
+      <div
+        className={
+          `relative mt-8 w-full max-w-md transform-gpu transition-transform duration-500 ease-out md:mt-0 md:ml-auto ` +
+          (previewActive
+            ? 'scale-[1.03] md:scale-[1.11] md:-translate-y-2 md:translate-x-2 md:rotate-1'
+            : 'scale-400')
+        }
+        onMouseEnter={() => setPreviewActive(true)}   // trigger 2
+        onMouseLeave={() => setPreviewActive(false)}
+      >
         <div className="rounded-3xl border border-slate-700/80 bg-slate-950/80 p-4 shadow-2xl shadow-cyan-500/10 backdrop-blur">
           {/* mini top bar */}
           <div className="mb-4 flex items-center justify-between">

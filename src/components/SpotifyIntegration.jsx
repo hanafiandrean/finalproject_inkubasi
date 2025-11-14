@@ -7,6 +7,7 @@ function SpotifyIntegration() {
       className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16"
     >
       <div className="grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+        {/* teks penjelasan kiri */}
         <div>
           <h2 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl">
             AI + Spotify: mood jadi musik
@@ -65,8 +66,16 @@ function SpotifyIntegration() {
           </div>
         </div>
 
-        {/* mock spotify player */}
-        <div className="relative overflow-hidden rounded-3xl border border-green-500/40 bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-900/40 p-4 shadow-[0_0_80px_rgba(16,185,129,0.35)]">
+        {/* card spotify kanan, zoom pas mouse di dalam border */}
+        <div
+          className="
+            relative overflow-hidden rounded-3xl border border-green-500/40
+            bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-900/40
+            p-4 shadow-[0_0_60px_rgba(16,185,129,0.35)]
+            transform-gpu transition-transform duration-500 ease-out
+            hover:scale-[1.03] md:hover:scale-[1.05]
+          "
+        >
           <div className="flex items-center gap-3">
             <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-emerald-400 to-ink-primary/80" />
             <div>
@@ -102,13 +111,13 @@ function SpotifyIntegration() {
           {/* controls */}
           <div className="mt-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <button className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-900/90 text-xs">
+              <button className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-900/90 text-xs text-slate-200 transition hover:bg-slate-800">
                 ⏮
               </button>
-              <button className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-400 text-slate-950 text-base shadow-lg shadow-emerald-500/40">
+              <button className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-400 text-slate-950 text-base shadow-lg shadow-emerald-500/40 transition hover:scale-105">
                 ▶
               </button>
-              <button className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-900/90 text-xs">
+              <button className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-900/90 text-xs text-slate-200 transition hover:bg-slate-800">
                 ⏭
               </button>
             </div>

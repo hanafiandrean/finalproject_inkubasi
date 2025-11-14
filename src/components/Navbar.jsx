@@ -22,7 +22,7 @@ function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
         <div className="flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-ink-primary to-ink-accent shadow-glow">
-            <span className="text-lg font-semibold text-slate-950">MV</span>
+            <span className="text-lg font-semibold text-slate-950">🎧</span>
           </div>
           <div>
             <div className="text-sm font-semibold tracking-wide text-slate-50">

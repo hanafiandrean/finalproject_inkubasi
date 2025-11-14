@@ -102,6 +102,9 @@ function Collaboration() {
               #Alhamdulillah
             </span>
             <span className="rounded-full bg-slate-900/90 px-3 py-1">
+              #TolongItunyaDiapakanDuluBiarGaApaKali
+            </span>
+            <span className="rounded-full bg-slate-900/90 px-3 py-1">
               #MakasihInkubasiAkuSayangKamu
             </span>
           </div>
